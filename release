@@ -5,4 +5,4 @@ set -l modid $modinfo[1]
 set -l modversion $modinfo[2]
 set -l pkgname {$modid}_$modversion.zip
 zip -r $pkgname modinfo.json assets
-gh release create v$modversion --fail-on-no-commits -n'' $pkgname
+gh release create v$modversion --fail-on-no-commits $pkgname
